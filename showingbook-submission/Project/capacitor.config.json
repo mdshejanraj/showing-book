@@ -1,0 +1,8 @@
+{
+  "appId": "com.example.showingbook",
+  "appName": "ShowingBook",
+  "webDir": "web/public",
+  "server": {
+    "androidScheme": "https"
+  }
+}

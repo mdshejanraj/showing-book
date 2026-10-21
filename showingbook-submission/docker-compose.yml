@@ -1,0 +1,18 @@
+services:
+  showingbook:
+    build:
+      context: .
+      dockerfile: Project/Dockerfile
+    image: showingbook:1.0.0
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_PATH: /data/showingbook.db
+      PORT: "3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - showingbook-data:/data
+
+volumes:
+  showingbook-data:
